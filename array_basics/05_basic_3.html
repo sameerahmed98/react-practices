@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_basic 3</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+
+<script>
+
+    function createDiv(color, text) {
+        const divElement = document.createElement("div")
+        divElement.style.backgroundColor = color
+        divElement.style.fontSize = "20px"
+        divElement.style.padding = "20px"
+        divElement.style.marginBottom = "10px"
+
+        const addText = document.createTextNode(text)
+        divElement.appendChild(addText)
+
+        document.body.appendChild(divElement)
+    }
+
+    const personNames = ['Sameer', 'Ahmed', 'Bobbie', 'Cris', 'Noah', 'Panday', 'Anas', 'Jim', 'John', 'Doe']
+
+    for (let i = 0; i < personNames.length; i++) {
+        const personSingleName = personNames[i]
+        createDiv('green', `Welcome ${personSingleName} your user has been logged In.`)
+    }
+</script>
+
+</html>
